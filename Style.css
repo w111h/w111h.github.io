@@ -1,3 +1,22 @@
 .Header {
   color: rgb(30 64 175);
 }
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+}
+
+.dummy {
+  display: hidden;
+}
+
+/* .hidden {
+  transform: translateX(-100%);
+  overflow: hidden;
+} */
+
+/* .show {
+  transform: translate(0);
+  transition: transform 1s;
+} */
