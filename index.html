@@ -38,65 +38,100 @@
 
       <!-- First section -->
 
-      <!-- <div class="border border-solid border-gray-200 main"> -->
-      <div id="overview" class="border border-solid border-gray-200 flex-col">
-        <div class="flex-col">
+      <div id="first_section_chart" class="border border-solid border-gray-200">
+        <div class="flex justify-left">
           <img src="Images/Cases.svg" alt="Image of Cases" />
-          <div>Figures Cases</div>
-          <div>the numbers</div>
+          <div class="text-blue-900 text-4xl font-bold">81</div>
+          Cases
         </div>
 
-        <div class="flex-col justfiy-center align-middle">
+        <div class="flex justify-left align-middle">
           <img src="Images/Workers.svg" alt="Image of Workers" />
-          <div>Figures Workers</div>
+          <div class="text-blue-900 text-4xl font-bold">1,193</div>
+          Workers
         </div>
       </div>
 
       <!-- 2nd section (horizontally aligned) -->
 
       <div
-        class="border border-solid border-gray-200 flex justify-center items-center"
+        id="second_section_chart"
+        class="border border-solid border-gray-200"
       >
-        <img
-          src="Images/Construction Sector.svg"
-          alt="Image of Construction Sector"
-        />
-        81% of cases<b> stem </b> from Constuction Sector
+        <div class="flex justify-left align-center">
+          <img
+            src="Images/Construction Sector.svg"
+            alt="Image of Construction Sector"
+          />
+          <b> 81% </b> &nbsp of cases stem from &nbsp
+          <b> Constuction Sector </b>
+        </div>
       </div>
 
       <!-- 3rd section (aligned right below 2nd section) -->
-      <div class="border border-solid border-gray-200">
-        <p>
-          <img src="Images/Trend.svg" alt="Image of Trend" />Sample image
-          Increase in referrals from FWMOMCare App, up from 2 in Feb to 8 in Mar
-        </p>
+      <div
+        class="border border-solid border-gray-200 flex justify-left items-center"
+      >
+        <img src="Images/Trend.svg" alt="Image of Trend" />
+        <b> Increase </b> &nbsp in referrals from &nbsp <b> FWMOMCare App </b>,
+        up from 2 in Feb to 8 in Mar
       </div>
 
       <!-- 4th section (aligned right below 1st section) -->
-      <div class="border border-solid border-gray-200">
-        <p>
-          <img
-            src="Images/Housing Issues.svg"
-            alt="Image of Housing Issues"
-          />Figures Cases
-        </p>
+
+      <div
+        class="border border-solid border-gray-200 flex justify-left items-center"
+      >
+        <img src="Images/Housing Issues.svg" alt="Image of Housing Issues" />
+        <div class="text-blue-900 text-4xl font-bold">24</div>
+        Cases
       </div>
 
       <!-- 5th section (aligned right beside 4th section) -->
-      <div class="border border-solid border-gray-200">
-        <p>
-          <img src="Images/Food Issues.svg" alt="Image of Food Issues" />Figures
-          Cases
-        </p>
+      <div
+        class="border border-solid border-gray-200 flex justify-left items-center"
+      >
+        <img src="Images/Food Issues.svg" alt="Image of Food Issues" />
+        <div class="text-blue-900 text-4xl font-bold">12</div>
+        Cases
       </div>
     </div>
+
     <!-- <button id="trigger">onclick</button> -->
 
     <!-- dummy div -->
     <div class="dummy hidden" id="testing">
-      it is unhidden
-      <button id="hiddenBtn">show this</button>
+      <h2 class="text-gray-600 font-bold">Overview of Cases and Workers</h2>
+
+      <div style="display: flex; flex-direction: column">
+        <div id="chart" style="min-height: 50vh"></div>
+        <button
+          id="hiddenBtn"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          unhidden
+        </button>
+      </div>
     </div>
+
+    <!-- second section -->
+    <div class="second hidden" id="testing2">
+      <h2 class="text-gray-600 font-bold">Overview of Sectors</h2>
+
+      <div style="display: flex; flex-direction: column">
+        <div id="pie_chart" style="min-height: 500px"></div>
+      </div>
+      <button
+        id="secondbtn"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      >
+        unhidden
+      </button>
+    </div>
+
+    <script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"
