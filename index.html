@@ -27,36 +27,45 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Start of 1st/Main Page: Dashboard -->
+
+    <!-- Title: -->
+
     <div id="parent">
       <div class="Header flex">
-        <h2
-          class="text-blue-800 font-bold border-b-4 border-solid border-gray-500"
+        <div
+          class="text-blue-800 text-2xl font-bold border-b-4 border-solid border-gray-500 mb-6"
         >
           Key Insights for March 2023
-        </h2>
+        </div>
       </div>
 
-      <!-- First section -->
+      <!-- 1st Section: Key Insights of Cases and Workers -->
 
-      <div id="first_section_chart" class="border border-solid border-gray-200">
+      <div
+        id="first_section_chart"
+        class="border border-solid border-gray-200 py-4"
+      >
         <div class="flex justify-left">
           <img src="Images/Cases.svg" alt="Image of Cases" />
           <div class="text-blue-900 text-4xl font-bold">81</div>
+          <!-- Ideally, the number e.g. 1,193, should be dynamic. -->
           Cases
         </div>
 
         <div class="flex justify-left align-middle">
           <img src="Images/Workers.svg" alt="Image of Workers" />
           <div class="text-blue-900 text-4xl font-bold">1,193</div>
+          <!-- Ideally, the number e.g. 1,193, should be dynamic. -->
           Workers
         </div>
       </div>
 
-      <!-- 2nd section (horizontally aligned) -->
+      <!-- 2nd Section: Key Insights of Sectors (horizontally-aligned in desktop view) -->
 
       <div
         id="second_section_chart"
-        class="border border-solid border-gray-200"
+        class="border border-solid border-gray-200 py-4"
       >
         <div class="flex justify-left align-center">
           <img
@@ -69,38 +78,62 @@
         </div>
       </div>
 
-      <!-- 3rd section (aligned right below 2nd section) -->
+      <!-- 3rd Section: Key Insights of Referrals (aligned immediately below 2nd Section on desktop view) -->
+
       <div
-        class="border border-solid border-gray-200 flex justify-left items-center"
+        class="border border-solid border-gray-200 flex justify-left items-center py-4"
       >
         <img src="Images/Trend.svg" alt="Image of Trend" />
         <b> Increase </b> &nbsp in referrals from &nbsp <b> FWMOMCare App </b>,
         up from 2 in Feb to 8 in Mar
       </div>
 
-      <!-- 4th section (aligned right below 1st section) -->
+      <!-- 4th Section: Key Insights of Housing Cases (aligned immediately below 1st Section on desktop view) -->
 
       <div
-        class="border border-solid border-gray-200 flex justify-left items-center"
+        class="border border-solid border-gray-200 flex justify-left items-center py-4"
       >
         <img src="Images/Housing Issues.svg" alt="Image of Housing Issues" />
         <div class="text-blue-900 text-4xl font-bold">24</div>
         Cases
       </div>
 
-      <!-- 5th section (aligned right beside 4th section) -->
+      <!-- 5th section (aligned immediately on the right of 4th Section in desktop view) -->
       <div
-        class="border border-solid border-gray-200 flex justify-left items-center"
+        class="border border-solid border-gray-200 flex justify-left items-center py-4"
       >
         <img src="Images/Food Issues.svg" alt="Image of Food Issues" />
         <div class="text-blue-900 text-4xl font-bold">12</div>
         Cases
       </div>
+
+      <!-- 6th Section (aligned immediately on the right of 5th Section in desktop view) -->
+      <div
+        class="border border-solid border-gray-200 flex justify-left items-center py-4"
+      >
+        <div class="text-blue-900 text 9xl font-bold">Centralised Housing</div>
+        <div class="text-blue-900 text-4xl font-bold">0</div>
+        Cases
+      </div>
+
+      <!-- 7th Section (aligned on the right of 2nd Section in desktop view) -->
+      <div class="border border-solid border-gray-200 py-4">
+        In the case of
+        <b> Shanghai Chongkee Furniture & Construction Pte Ltd </b>, XCM learnt
+        that the re-housing contract with Kranji lodge had fallen through as the
+        company is unable to pay the deposit, <b> affecting 84 MWs </b>. XCM has
+        promptly surfaced the issue to LRWD and FMMD. There are no other
+        significant spikes or trends observed for Mar 2023.
+        <!-- This is intended to be hardcoded text, which is a summary of key statements decided by the user.-->
+      </div>
     </div>
+
+    <!-- End of First Page: Dashboard -->
 
     <!-- <button id="trigger">onclick</button> -->
 
-    <!-- dummy div -->
+    <!-- Interaction for First Section -->
+
     <div class="dummy hidden" id="testing">
       <h2 class="text-gray-600 font-bold">Overview of Cases and Workers</h2>
 
@@ -108,27 +141,30 @@
         <div id="chart" style="min-height: 50vh"></div>
         <button
           id="hiddenBtn"
-          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          class="bg-gray-500 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded"
         >
-          unhidden
+          Return to Dashboard
         </button>
       </div>
     </div>
 
-    <!-- second section -->
+    <!-- Interaction for Second Section -->
+
     <div class="second hidden" id="testing2">
       <h2 class="text-gray-600 font-bold">Overview of Sectors</h2>
 
       <div style="display: flex; flex-direction: column">
-        <div id="pie_chart" style="min-height: 500px"></div>
+        <div id="pie_chart" style="min-height: 50vh"></div>
       </div>
       <button
         id="secondbtn"
-        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        class="bg-gray-500 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded"
       >
-        unhidden
+        Return to Dashboard
       </button>
     </div>
+
+    <!-- Scripts -->
 
     <script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
 
